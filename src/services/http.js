@@ -14,7 +14,6 @@ const getDefaultConfigs = (config, _token, _locale, isMultipart) => {
     ...config,
     headers: {
       ...headers,
-      ['Access-Control-Allow-Origin']: '*',
       Authorization: token ? `Bearer ${token}` : undefined,
       ...(config.headers ? config.headers : {}),
     },
